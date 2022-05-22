@@ -1,0 +1,29 @@
+{
+  "name": "ui-challenge-100",
+  "version": "1.0.0",
+  "description": "In this repository we are going to code 100 UI & UX challenges by our favorite designer TEF",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html",
+    "build": "parcel build",
+    "compile:sass": "sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cricadev/ui-challenge-100.git"
+  },
+  "keywords": [
+    "UI"
+  ],
+  "author": "cricadev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cricadev/ui-challenge-100/issues"
+  },
+  "homepage": "https://github.com/cricadev/ui-challenge-100#readme",
+  "devDependencies": {
+    "parcel": "^2.5.0",
+    "sass": "^1.52.1"
+  }
+}

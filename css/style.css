@@ -1,0 +1,113 @@
+/*
+0-600px: phone
+600px-900px: tablet portrait
+900px-1200px: tablet landscape
+
+[1288 - 1800] is where our normal style apply 
+1800px and up: big desktop  
+  */
+/* 
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+
+ORDER: base + typography > general layout + grid > page layout > components
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  overflow-x: hidden;
+  background: #714fd1;
+  padding: 3rem;
+  box-sizing: border-box;
+}
+@media (max-width: 56.25em) {
+  body {
+    padding: 0;
+  }
+}
+
+body {
+  font-family: "M PLUS 1", sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: #000;
+}
+
+.heading-primary {
+  font-family: "M PLUS 1", sans-serif;
+  font-weight: 800;
+  font-size: 5.5rem;
+  color: #fff;
+  width: 100%;
+  line-height: 5.3rem;
+  text-transform: uppercase;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 3rem;
+}
+
+.button-container {
+  display: inline-block;
+  height: 100px;
+  width: 100vw;
+}
+.button-container .button {
+  border: none;
+  border-radius: 18px;
+  width: 14rem;
+  height: 6rem;
+  font-family: "M PLUS 1", sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #fff;
+  position: absolute;
+}
+.button-container .button__primary {
+  left: 3rem;
+  background: #1e005c;
+  transform: translateX(20%);
+}
+.button-container .button__secondary {
+  right: 8rem;
+  background: rgba(30, 0, 92, 0.55);
+}
+
+.bg-container {
+  height: 50vh;
+  width: 100%;
+  transform: scaleX(1.2);
+  position: relative;
+  background: #1e005c;
+  border-radius: 70% 70% 50% 50%;
+}
+
+.img-1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+}
+
+.section-home {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  margin-top: 9rem;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,97 @@
+*, :after, :before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  background: #714fd1;
+  padding: 3rem;
+  overflow-x: hidden;
+}
+
+@media (max-width: 56.25em) {
+  body {
+    padding: 0;
+  }
+}
+
+body {
+  color: #000;
+  font-family: "M PLUS 1", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.heading-primary {
+  color: #fff;
+  width: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 3rem;
+  font-family: "M PLUS 1", sans-serif;
+  font-size: 5.5rem;
+  font-weight: 800;
+  line-height: 5.3rem;
+}
+
+.button-container {
+  height: 100px;
+  width: 100vw;
+  display: inline-block;
+}
+
+.button-container .button {
+  width: 14rem;
+  height: 6rem;
+  color: #fff;
+  border: none;
+  border-radius: 18px;
+  font-family: "M PLUS 1", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  position: absolute;
+}
+
+.button-container .button__primary {
+  background: #1e005c;
+  left: 3rem;
+  transform: translateX(20%);
+}
+
+.button-container .button__secondary {
+  background: #1e005c8c;
+  right: 8rem;
+}
+
+.bg-container {
+  height: 50vh;
+  width: 100%;
+  background: #1e005c;
+  border-radius: 70% 70% 50% 50%;
+  position: relative;
+  transform: scaleX(1.2);
+}
+
+.img-1 {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.section-home {
+  width: 100%;
+  place-items: center;
+  margin-top: 9rem;
+  display: grid;
+}
+
+/*# sourceMappingURL=index.b2625c6b.css.map */

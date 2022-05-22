@@ -1,0 +1,13 @@
+.bg-container {
+  height: 50vh;
+  width: 100%;
+  transform: scaleX(1.2);
+  position: relative;
+  background: $color-violet-dark;
+  border-radius: 70% 70% 50% 50%;
+}
+
+.img-1 {
+  @include center;
+  width: 80%;
+}

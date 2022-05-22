@@ -1,0 +1,149 @@
+// ? mobile
+@mixin extra-bold-55($color) {
+  font-family: "M PLUS 1", sans-serif;
+  font-weight: 800;
+  font-size: 5.5rem;
+  color: $color;
+}
+@mixin bold-60($color) {
+  font-family: "M PLUS 1", sans-serif;
+  font-weight: 700;
+  font-size: 6rem;
+  color: $color;
+}
+@mixin bold-16($color) {
+  font-family: "M PLUS 1", sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: $color;
+}
+@mixin bold-14($color) {
+  font-family: "M PLUS 1", sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: $color;
+}
+@mixin semi-bold-15($color) {
+  font-family: "M PLUS 1", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: $color;
+}
+@mixin bold-12($color) {
+  font-family: "M PLUS 1", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: $color;
+}
+@mixin semi-bold-12($color) {
+  font-family: "M PLUS 1", sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: $color;
+}
+@mixin semi-bold-9($color) {
+  font-family: "M PLUS 1", sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: $color;
+}
+// ? tablet
+@mixin extra-bold-90($color) {
+  font-family: "M PLUS 1", sans-serif;
+  font-weight: 800;
+  font-size: 9rem;
+  color: $color;
+}
+@mixin bold-90($color) {
+  font-family: "M PLUS 1", sans-serif;
+  font-weight: 700;
+  font-size: 9rem;
+  color: $color;
+}
+@mixin bold-20($color) {
+  font-family: "M PLUS 1", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: $color;
+}
+@mixin bold-17($color) {
+  font-family: "M PLUS 1", sans-serif;
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: $color;
+}
+@mixin semi-bold-24($color) {
+  font-family: "M PLUS 1", sans-serif;
+  font-weight: 600;
+  font-size: 2.4rem;
+  color: $color;
+}
+@mixin bold-18($color) {
+  font-family: "M PLUS 1", sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: $color;
+}
+@mixin semi-bold-15($color) {
+  font-family: "M PLUS 1", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: $color;
+}
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// MEDIA QUERY MANAGER
+/*
+0-600px: phone
+600px-900px: tablet portrait
+900px-1200px: tablet landscape
+
+[1288 - 1800] is where our normal style apply 
+1800px and up: big desktop  
+  */
+
+/* 
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+
+ORDER: base + typography > general layout + grid > page layout > components
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
