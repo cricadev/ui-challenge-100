@@ -9,16 +9,15 @@ html {
 }
 
 body {
+  min-height: 100vh;
   box-sizing: border-box;
   background: #714fd1;
-  padding: 3rem;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
-@media (max-width: 56.25em) {
-  body {
-    padding: 0;
-  }
+main {
+  width: 100%;
+  min-height: 100vh;
 }
 
 body {
@@ -33,8 +32,6 @@ body {
   width: 100%;
   text-transform: uppercase;
   text-align: center;
-  margin: 0 auto;
-  padding: 0 3rem;
   font-family: "M PLUS 1", sans-serif;
   font-size: 5.5rem;
   font-weight: 800;
@@ -44,7 +41,10 @@ body {
 .button-container {
   height: 100px;
   width: 100vw;
-  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+  display: flex;
 }
 
 .button-container .button {
@@ -53,6 +53,7 @@ body {
   color: #fff;
   border: none;
   border-radius: 18px;
+  margin: 0 auto;
   font-family: "M PLUS 1", sans-serif;
   font-size: 1.6rem;
   font-weight: 700;
@@ -61,36 +62,35 @@ body {
 
 .button-container .button__primary {
   background: #1e005c;
-  left: 3rem;
-  transform: translateX(20%);
+  transform: translateX(-40%);
 }
 
 .button-container .button__secondary {
   background: #1e005c8c;
-  right: 8rem;
+  transform: translateX(40%);
 }
 
 .bg-container {
-  height: 50vh;
+  height: 450px;
+  max-height: 600px;
   width: 100%;
   background: #1e005c;
   border-radius: 70% 70% 50% 50%;
+  margin-top: 4rem;
   position: relative;
-  transform: scaleX(1.2);
 }
 
 .img-1 {
-  width: 80%;
+  height: 400px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-40%, -40%);
 }
 
 .section-home {
   width: 100%;
   place-items: center;
-  margin-top: 9rem;
   display: grid;
 }
 

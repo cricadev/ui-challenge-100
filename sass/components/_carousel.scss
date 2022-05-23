@@ -1,13 +1,17 @@
 .bg-container {
-  height: 50vh;
+  height: 450px;
+  max-height: 600px;
+  margin-top: 4rem;
   width: 100%;
-  transform: scaleX(1.2);
   position: relative;
   background: $color-violet-dark;
   border-radius: 70% 70% 50% 50%;
 }
 
 .img-1 {
-  @include center;
-  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -40%);
+  height: 400px;
 }

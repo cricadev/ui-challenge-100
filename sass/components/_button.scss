@@ -1,6 +1,8 @@
 .button-container {
-  display: inline-block;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
   height: 100px;
   width: 100vw;
 
@@ -9,16 +11,17 @@
     border-radius: 18px;
     width: 14rem;
     height: 6rem;
+    margin: 0 auto;
     @include bold-16($color-white);
     position: absolute;
 
     &__primary {
-      left: 3rem;
       background: $color-violet-dark;
-      transform: translateX(20%);
+      transform: translateX(-40%);
     }
     &__secondary {
-      right: 8rem;
+      transform: translateX(40%);
+
       background: rgba($color-violet-dark, 0.55);
     }
   }

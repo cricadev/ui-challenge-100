@@ -10,11 +10,12 @@ html {
   font-size: 62.5%;
 }
 body {
-  overflow-x: hidden;
+  min-height: 100vh;
+  overflow: hidden;
   background: $color-violet;
-  padding: 3rem;
   box-sizing: border-box;
-  @include respond(tab-port) {
-    padding: 0;
-  }
+}
+main {
+  width: 100%;
+  min-height: 100vh;
 }
