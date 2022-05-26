@@ -4,26 +4,22 @@
   "description": "In this repository we are going to code 100 UI & UX challenges by our favorite designer TEF",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel index.html",
-    "build": "parcel build",
-    "compile:sass": "sass sass/main.scss css/style.css -w"
+    "watch:sass": "sass --watch sass/main.scss css/style.css",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.concat.css -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cricadev/ui-challenge-100.git"
-  },
-  "keywords": [
-    "UI"
-  ],
-  "author": "cricadev",
+  "author": "CricaDev",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/cricadev/ui-challenge-100/issues"
-  },
-  "homepage": "https://github.com/cricadev/ui-challenge-100#readme",
   "devDependencies": {
-    "parcel": "^2.5.0",
+    "autoprefixer": "^7.1.4",
+    "concat": "^1.0.3",
+    "node-sass": "^4.5.3",
+    "npm-run-all": "^4.1.1",
+    "postcss-cli": "^4.1.1",
     "sass": "^1.52.1"
   }
 }
