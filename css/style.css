@@ -153,9 +153,22 @@ body {
   place-items: center;
   grid-template-rows: 25% 55% 20%;
   background: #fff;
-  transform: translateY(-200%);
+  animation-name: slide;
+  animation-duration: 3s;
+  animation-fill-mode: infinite;
 }
 
+@keyframes slide {
+  0% {
+    transform: translate(0%, 0%) scale(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(10);
+  }
+  100% {
+    transform: translate(0%, 0%) scale(0);
+  }
+}
 .section-home {
   height: 100vh;
   display: grid;
