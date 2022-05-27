@@ -69,20 +69,30 @@ body {
   bottom: 0;
 }
 .button-container .button {
+  text-decoration: none;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   border: none;
   border-radius: 18px;
   width: 14rem;
   height: 5.5rem;
-  margin: 0 auto;
   font-family: "M PLUS 1", sans-serif;
   font-weight: 700;
   font-size: 1.6rem;
   color: #fff;
   position: absolute;
+  transition: all 0.5s ease-in;
 }
 .button-container .button__primary {
   background: #1e005c;
   transform: translateX(-40%);
+}
+.button-container .button__primary:active .section-signup {
+  transform: translateY(0%);
+  transition: all 0.5s;
 }
 .button-container .button__secondary {
   transform: translateX(40%);
@@ -112,15 +122,16 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url(../../img/mobile-01.png);
+  background-image: url(../../img/mobile-02.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  transition: 5s;
+  transition: 0.0001s;
+  opacity: 0;
   animation-name: animate;
-  animation-direction: alternate-reverse;
-  animation-duration: 30s;
-  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  animation-duration: 9s;
+  animation-fill-mode: backwards;
   animation-iteration-count: infinite;
   animation-play-state: running;
   animation-timing-function: linear;
@@ -134,41 +145,79 @@ body {
 @keyframes animate {
   0% {
     background-image: url(../../img/mobile-02.png);
+    opacity: 1;
+    bottom: 0;
   }
-  50% {
+  32% {
+    background-image: url(../../img/mobile-02.png);
+    opacity: 1;
+    bottom: 0;
+  }
+  33% {
     background-image: url(../../img/mobile-03.png);
+    opacity: 1;
+    bottom: -3rem;
+  }
+  65% {
+    background-image: url(../../img/mobile-03.png);
+    opacity: 1;
+    bottom: -3rem;
+  }
+  66% {
+    background-image: url(../../img/mobile-01.png);
+    opacity: 1;
+    bottom: 0;
+  }
+  99% {
+    background-image: url(../../img/mobile-01.png);
+    opacity: 1;
+    bottom: 0;
   }
   100% {
     background-image: url(../../img/mobile-01.png);
+    opacity: 1;
+    bottom: 0;
   }
 }
-.section-signup {
+.signup {
+  position: fixed;
   height: 100vh;
-  position: absolute;
+  width: 100%;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  display: grid;
-  place-items: center;
-  grid-template-rows: 25% 55% 20%;
-  background: #fff;
-  animation-name: slide;
-  animation-duration: 3s;
-  animation-fill-mode: infinite;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.signup__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  display: table;
+  overflow: hidden;
+  opacity: 0;
+  transform: translate(-50%, 200%) scale(1);
+  transition: all 0.5s 0.2s;
+}
+.signup:target {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s ease-in-out;
+}
+.signup:target .signup__content {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0.5s;
 }
 
-@keyframes slide {
-  0% {
-    transform: translate(0%, 0%) scale(0);
-  }
-  50% {
-    transform: translate(-50%, -50%) scale(10);
-  }
-  100% {
-    transform: translate(0%, 0%) scale(0);
-  }
-}
 .section-home {
   height: 100vh;
   display: grid;
