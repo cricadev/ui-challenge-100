@@ -34,55 +34,63 @@
             <div class="circle circle--3"></div>
           </div>
           <form action="#" class="form">
-            <h2 class="heading-secondary">Sign up</h2>
-            <input
-              type="email"
-              id="email"
-              placeholder="Email"
-              class="form__input"
-              required
-            />
-            <label for="email" class="form__label">Email</label>
+            <h2 class="heading-secondary form__title">Sign up</h2>
+            <div class="form__fill">
+              <input
+                type="email"
+                id="email"
+                placeholder="Email"
+                class="form__input"
+                required
+              />
+              <label for="email" class="form__label">Email</label>
 
-            <input
-              type="password"
-              id="password"
-              placeholder="Password"
-              class="form__input"
-              required
-            />
-            <label for="password" class="form__label">Password</label>
-
-            <div class="passStats">
-              <span>Password strength: Low</span>
+              <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                class="form__input"
+                required
+              />
+              <label for="password" class="form__label">Password</label>
+              <div class="form__stats">
+                <p class="form__password">Password strength: Low</p>
+                <div class="low sq"></div>
+                <div class="medium sq"></div>
+                <div class="strong sq"></div>
+              </div>
+              <div class="form__print">
+                <img src="img/fingerprint.svg" alt="" />
+                <span>Add a fingerprint</span>
+              </div>
             </div>
-            <div class="print">
-              <img src="img/fingerprint.svg" alt="" />
-              <span>Add a fingerprint</span>
+            <div class="form__submit">
+              <a
+                href="#signup"
+                class="button button__primary button__primary--start"
+                >Let's start</a
+              >
+
+              <div class="form__divider">
+                <div class="line"></div>
+                <span>Or</span>
+                <div class="line"></div>
+              </div>
+
+              <a
+                href="#login"
+                class="button button__secondary button__secondary--google"
+                ><span><img src="img/Google.svg" alt="" /></span> Login with
+                google</a
+              >
+              <p class="form__before">
+                Joined us before? <a href="#login">Login</a>
+              </p>
             </div>
-
-            <p>Joined us before? <a href="#">Login</a></p>
-
-            <a
-              href="#signup"
-              class="button button__primary button__primary--start"
-              >Let's start</a
-            >
-
-            <div class="divider">
-              <span class="line"></span><span>Or</span
-              ><span class="line"></span>
-            </div>
-
-            <a
-              href="#login"
-              class="button button__secondary button__secondary--google"
-              ><span><img src="img/Google.svg" alt="" /></span> Login with
-              google</a
-            >
           </form>
         </div>
       </div>
     </main>
+    <script src="index.js"></script>
   </body>
 </html>
