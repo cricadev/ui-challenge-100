@@ -78,7 +78,7 @@
     color: rgba($color-gray, 0.8);
     text-align: center;
     .form__password {
-      transform: translate(-20%, -200%);
+      transform: translate(-20%, 00%);
     }
     .sq {
       height: 4px;
@@ -86,13 +86,13 @@
       border-radius: 10px;
 
       background-color: $color-gray;
-      transform: translate(50%, -500%);
+      transform: translate(50%, 200%);
     }
     .medium {
-      transform: translate(160%, -600%);
+      transform: translate(160%, 100%);
     }
     .strong {
-      transform: translate(270%, -700%);
+      transform: translate(270%, 0%);
     }
   }
   &__print {
@@ -104,7 +104,7 @@
     align-items: center;
     flex-direction: column;
     gap: 0.5rem;
-    transform: translateY(0%);
+    transform: translateY(40%);
     img {
       justify-self: center;
       width: 2.5rem;
@@ -167,14 +167,14 @@
     margin-left: 2rem;
     margin-top: 0.7rem;
     display: block;
-    transform: translateY(0);
+    transform: translateY(-1rem);
     transition: all 0.3s;
   }
 
   &__input:placeholder-shown + &__label {
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-4rem);
+    transform: translateY(4rem);
   }
 }
 .animationSign {

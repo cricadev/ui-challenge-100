@@ -57,6 +57,11 @@
     background: rgba($color-violet-dark, 0.55);
     width: 100%;
     align-self: end;
+
     transform: translateX(0%) translateY(-180%);
+    img {
+      margin-right: 1rem;
+      margin-top: 0.5rem;
+    }
   }
 }

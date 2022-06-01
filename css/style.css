@@ -117,6 +117,10 @@ body {
   align-self: end;
   transform: translateX(0%) translateY(-180%);
 }
+.button__secondary--google img {
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+}
 
 .bg-container {
   grid-row: 2/3;
@@ -284,20 +288,20 @@ body {
   text-align: center;
 }
 .form__stats .form__password {
-  transform: translate(-20%, -200%);
+  transform: translate(-20%, 0%);
 }
 .form__stats .sq {
   height: 4px;
   width: 25%;
   border-radius: 10px;
   background-color: #8c8c8c;
-  transform: translate(50%, -500%);
+  transform: translate(50%, 200%);
 }
 .form__stats .medium {
-  transform: translate(160%, -600%);
+  transform: translate(160%, 100%);
 }
 .form__stats .strong {
-  transform: translate(270%, -700%);
+  transform: translate(270%, 0%);
 }
 .form__print {
   align-self: center;
@@ -308,7 +312,7 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 0.5rem;
-  transform: translateY(0%);
+  transform: translateY(40%);
 }
 .form__print img {
   justify-self: center;
@@ -375,13 +379,13 @@ body {
   margin-left: 2rem;
   margin-top: 0.7rem;
   display: block;
-  transform: translateY(0);
+  transform: translateY(-1rem);
   transition: all 0.3s;
 }
 .form__input:placeholder-shown + .form__label {
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-4rem);
+  transform: translateY(4rem);
 }
 
 .animationSign {
