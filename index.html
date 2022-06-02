@@ -52,9 +52,14 @@
                 class="form__input"
                 required
               />
+
               <label for="password" class="form__label">Password</label>
-              <div class="form__stats">
-                <p class="form__password">Password strength: Low</p>
+              <div class="form__eye form__eye--sign" id="viewPass"></div>
+
+              <div class="form__stats" id="stats">
+                <p class="form__password">
+                  Password strength: <span id="securityText">none</span>
+                </p>
                 <div class="low sq"></div>
                 <div class="medium sq"></div>
                 <div class="strong sq"></div>
@@ -116,10 +121,10 @@
                 class="form__input"
                 required
               />
+
               <label for="password" class="form__label">Password</label>
-              <div class="form__eye" id="viewPass">
-                <img src="img/eye.png" alt="" />
-              </div>
+              <div class="form__eye" id="viewPass"></div>
+
               <span class="form__forgot">Forgot a password?</span>
               <div class="form__print form__print--login">
                 <img src="img/fingerprint.svg" alt="" />
