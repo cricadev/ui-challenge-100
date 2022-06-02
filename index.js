@@ -27,6 +27,7 @@ passInput.forEach(function(input){
     const regexAll = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
     const value = e.target.value;
     const length = e.target.value.length 
+
     if(length >= 0){
       statsPass.classList.remove("highSec");
       statsPass.classList.remove("medSec");
