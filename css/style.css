@@ -330,6 +330,7 @@ body {
   flex-direction: column;
   gap: 0.5rem;
   transform: translateY(40%);
+  font-size: 0.9rem;
 }
 .form__print img {
   justify-self: center;
