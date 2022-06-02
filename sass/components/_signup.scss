@@ -46,6 +46,12 @@
   grid-template-rows: 30% 35% 35%;
   grid-template-columns: 100%;
   justify-content: center;
+  &__eye {
+    img {
+      height: 1rem;
+      width: 1rem;
+    }
+  }
   &__forgot {
     @include bold-14($color-violet);
     text-align: end;
