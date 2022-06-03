@@ -33,20 +33,27 @@
       transform: translateY(0%);
       transition: all 0.5s;
     }
+    @include respond(desktop) {
+      visibility: hidden;
+    }
   }
   &__secondary {
     transform: translateX(40%);
 
     background: rgba($color-violet-dark, 0.55);
+    @include respond(desktop) {
+      visibility: hidden;
+    }
   }
   &__primary--start {
     background: $color-violet-dark;
     width: 100%;
-    margin: 0 auto;
-    transform: translateX(0%) translateY(50%);
-    grid-row: 3/4;
+    grid-row: 1/2;
+    place-self: center;
+    transform: translate(0%, 0%);
+
     &--login {
-      transform: translateX(0%) translateY(-10%);
+      transform: translate(0%, 0%);
     }
     &:hover {
     }
@@ -54,16 +61,23 @@
       transform: translateY(0%);
       transition: all 0.5s;
     }
+    @include respond(desktop) {
+      visibility: visible;
+      width: 50%;
+    }
   }
   &__secondary--google {
-    grid-row: 3/4;
     background: rgba($color-violet-dark, 0.55);
     width: 100%;
-    align-self: end;
-
-    transform: translateX(0%) translateY(-180%);
+    grid-row: 2/3;
+    place-self: center;
+    transform: translate(0%, 0%);
+    @include respond(desktop) {
+      visibility: visible;
+      width: 50%;
+    }
     &--login {
-      transform: translateX(0%) translateY(-200%);
+      transform: translate(0%, 0%);
     }
     img {
       margin-right: 1rem;

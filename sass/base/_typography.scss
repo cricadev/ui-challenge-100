@@ -10,4 +10,14 @@ body {
   line-height: 5.3rem;
   text-transform: uppercase;
   text-align: center;
+  @include respond(desktop) {
+    width: 50%;
+    @include extra-bold-55($color-white);
+    line-height: 5.3rem;
+  }
+  @include respond(big-desktop) {
+    width: 50%;
+    @include extra-bold-90($color-white);
+    line-height: 9.3rem;
+  }
 }

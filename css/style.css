@@ -39,6 +39,15 @@ main {
   width: 100%;
   min-height: 100vh;
 }
+@media (min-width: 87.5em) {
+  main {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+  }
+}
 
 body {
   font-family: "M PLUS 1", sans-serif;
@@ -56,6 +65,26 @@ body {
   line-height: 5.3rem;
   text-transform: uppercase;
   text-align: center;
+}
+@media (min-width: 87.5em) {
+  .heading-primary {
+    width: 50%;
+    font-family: "M PLUS 1", sans-serif;
+    font-weight: 800;
+    font-size: 5.5rem;
+    color: #fff;
+    line-height: 5.3rem;
+  }
+}
+@media (min-width: 112.5em) {
+  .heading-primary {
+    width: 50%;
+    font-family: "M PLUS 1", sans-serif;
+    font-weight: 800;
+    font-size: 9rem;
+    color: #fff;
+    line-height: 9.3rem;
+  }
 }
 
 .button-container {
@@ -95,33 +124,55 @@ body {
   transform: translateY(0%);
   transition: all 0.5s;
 }
+@media (min-width: 87.5em) {
+  .button__primary {
+    visibility: hidden;
+  }
+}
 .button__secondary {
   transform: translateX(40%);
   background: rgba(30, 0, 92, 0.55);
 }
+@media (min-width: 87.5em) {
+  .button__secondary {
+    visibility: hidden;
+  }
+}
 .button__primary--start {
   background: #1e005c;
   width: 100%;
-  margin: 0 auto;
-  transform: translateX(0%) translateY(50%);
-  grid-row: 3/4;
+  grid-row: 1/2;
+  place-self: center;
+  transform: translate(0%, 0%);
 }
 .button__primary--start--login {
-  transform: translateX(0%) translateY(-10%);
+  transform: translate(0%, 0%);
 }
 .button__primary--start:active .section-signup {
   transform: translateY(0%);
   transition: all 0.5s;
 }
+@media (min-width: 87.5em) {
+  .button__primary--start {
+    visibility: visible;
+    width: 50%;
+  }
+}
 .button__secondary--google {
-  grid-row: 3/4;
   background: rgba(30, 0, 92, 0.55);
   width: 100%;
-  align-self: end;
-  transform: translateX(0%) translateY(-180%);
+  grid-row: 2/3;
+  place-self: center;
+  transform: translate(0%, 0%);
+}
+@media (min-width: 87.5em) {
+  .button__secondary--google {
+    visibility: visible;
+    width: 50%;
+  }
 }
 .button__secondary--google--login {
-  transform: translateX(0%) translateY(-200%);
+  transform: translate(0%, 0%);
 }
 .button__secondary--google img {
   margin-right: 1rem;
@@ -130,29 +181,66 @@ body {
 
 .bg-container {
   grid-row: 2/3;
+  grid-column: 1/2;
   display: flex;
   width: 100%;
   height: 100%;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   position: relative;
 }
 
 .bg-shape {
-  min-width: 30rem;
-  min-height: 30rem;
+  width: 10rem;
+  height: 10rem;
   background: #1e005c;
   border-radius: 70% 70% 50% 50%;
-  transform: scaleX(1.4) scaleY(1.3);
-  place-self: center;
+  position: relative;
+  transform: scale(2.8);
+}
+@media (min-width: 19.9em) {
+  .bg-shape {
+    transform: scale(2.8);
+  }
+}
+@media (min-width: 22.5em) {
+  .bg-shape {
+    transform: scale(3.2);
+  }
+}
+@media (min-width: 27.5em) {
+  .bg-shape {
+    transform: scale(3.6);
+  }
+}
+@media (min-width: 37.5em) {
+  .bg-shape {
+    transform: scale(5.4);
+  }
+}
+@media (min-width: 56.25em) {
+  .bg-shape {
+    transform: scale(6.4);
+  }
+}
+@media (min-width: 75em) {
+  .bg-shape {
+    transform: scale(5.4);
+  }
+}
+@media (min-width: 87.5em) {
+  .bg-shape {
+    transform: scale(6.4);
+  }
 }
 
 .img {
+  width: 10rem;
+  height: 10rem;
   position: absolute;
-  width: 100%;
-  height: 100%;
+  top: 50%;
   background-image: url(../../img/mobile-02.png);
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   transition: 0.0001s;
@@ -165,10 +253,40 @@ body {
   animation-play-state: running;
   animation-timing-function: linear;
 }
-.img::after {
-  content: "";
-  display: table;
-  clear: both;
+@media (min-width: 19.9em) {
+  .img {
+    transform: scale(2.8);
+  }
+}
+@media (min-width: 22.5em) {
+  .img {
+    transform: scale(3.2);
+  }
+}
+@media (min-width: 27.5em) {
+  .img {
+    transform: scale(3.6);
+  }
+}
+@media (min-width: 37.5em) {
+  .img {
+    transform: scale(5.4);
+  }
+}
+@media (min-width: 56.25em) {
+  .img {
+    transform: scale(6.4);
+  }
+}
+@media (min-width: 75em) {
+  .img {
+    transform: scale(5.4);
+  }
+}
+@media (min-width: 87.5em) {
+  .img {
+    transform: scale(6.4);
+  }
 }
 
 @keyframes animate {
@@ -220,6 +338,17 @@ body {
   visibility: hidden;
   transition: all 0.3s;
 }
+@media (min-width: 87.5em) {
+  .signup {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    position: relative;
+    visibility: visible;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+  }
+}
 .signup__content {
   position: absolute;
   top: 50%;
@@ -237,10 +366,20 @@ body {
   transform: translate(-50%, 200%) scale(1);
   transition: all 0.5s 0.2s;
 }
+@media (min-width: 87.5em) {
+  .signup__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
 .signup:target {
   opacity: 1;
   visibility: visible;
   transition: all 0.5s ease-in-out;
+}
+.signup:target ~ .signup--login {
+  visibility: hidden;
+  opacity: 0;
 }
 .signup:target .signup__content {
   opacity: 1;
@@ -319,10 +458,7 @@ body {
   align-items: center;
   justify-content: center;
   color: #8c8c8c;
-  transform: translateY(25%);
-}
-.form__divider--login {
-  transform: translateY(12%);
+  grid-row: 1/3;
 }
 .form__divider .line {
   width: 40%;
@@ -376,6 +512,24 @@ body {
   width: 2.5rem;
   height: 2.5rem;
 }
+@media (min-width: 37.5em) {
+  .form__print img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+@media (min-width: 56.25em) {
+  .form__print img {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+@media (min-width: 87.5em) {
+  .form__print img {
+    width: 5rem;
+    height: 5rem;
+  }
+}
 .form__print--login {
   transform: translateY(-100%);
 }
@@ -390,8 +544,12 @@ body {
   grid-row: 2/3;
 }
 .form__submit {
-  display: grid;
   grid-row: 3/4;
+  grid-column: 1/2;
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-rows: 50% 50%;
 }
 .form__title {
   grid-row: 1/2;
@@ -411,7 +569,7 @@ body {
   background-color: rgba(255, 255, 255, 0.5);
   border: none;
   border-bottom: 3px solid transparent;
-  width: 60%;
+  width: 100%;
   display: block;
   transition: all 0.3s;
   border-bottom: 1px solid rgba(140, 140, 140, 0.8);
@@ -419,7 +577,7 @@ body {
 .form__input:not(:last-of-type) {
   transform: translateY(40%);
 }
-@media (max-width: 56.25em) {
+@media (min-width: 56.25em) {
   .form__input {
     width: 100%;
   }
@@ -544,9 +702,18 @@ body {
 }
 .section-home {
   height: 100vh;
+  width: 100vw;
   display: grid;
   place-items: center;
+  place-content: center;
   grid-template-rows: 25% 55% 20%;
+}
+@media (min-width: 87.5em) {
+  .section-home {
+    grid-row: 1/2;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

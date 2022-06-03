@@ -1,27 +1,49 @@
 .bg-container {
   grid-row: 2/3;
+  grid-column: 1/2;
   display: flex;
   width: 100%;
   height: 100%;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   position: relative;
 }
 .bg-shape {
-  min-width: 30rem;
-  min-height: 30rem;
+  width: 10rem;
+  height: 10rem;
   background: $color-violet-dark;
   border-radius: 70% 70% 50% 50%;
-  transform: scaleX(1.4) scaleY(1.3);
-  place-self: center;
+  position: relative;
+  transform: scale(2.8);
+  @include respond(xss-phone) {
+    transform: scale(2.8);
+  }
+  @include respond(xs-phone) {
+    transform: scale(3.2);
+  }
+  @include respond(x-phone) {
+    transform: scale(3.6);
+  }
+  @include respond(phone) {
+    transform: scale(5.4);
+  }
+  @include respond(tab-port) {
+    transform: scale(6.4);
+  }
+  @include respond(tab-land) {
+    transform: scale(5.4);
+  }
+  @include respond(desktop) {
+    transform: scale(6.4);
+  }
 }
 .img {
-  @include clearfix;
+  width: 10rem;
+  height: 10rem;
   position: absolute;
-  width: 100%;
-  height: 100%;
+  top: 50%;
   background-image: url(../../img/mobile-02.png);
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   transition: 0.0001s;
@@ -33,6 +55,27 @@
   animation-iteration-count: infinite;
   animation-play-state: running;
   animation-timing-function: linear;
+  @include respond(xss-phone) {
+    transform: scale(2.8);
+  }
+  @include respond(xs-phone) {
+    transform: scale(3.2);
+  }
+  @include respond(x-phone) {
+    transform: scale(3.6);
+  }
+  @include respond(phone) {
+    transform: scale(5.4);
+  }
+  @include respond(tab-port) {
+    transform: scale(6.4);
+  }
+  @include respond(tab-land) {
+    transform: scale(5.4);
+  }
+  @include respond(desktop) {
+    transform: scale(6.4);
+  }
 }
 
 @keyframes animate {
